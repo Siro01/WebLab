@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本 - Descubre Japón | Turismo y Aventuras</title>
+    <link rel="stylesheet" href="turismo.css">
+
+</head>
+<body>
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span class="japanese-accent">日本</span> Descubre Japón</h1>
+                <p>Experiencias únicas en el país del sol naciente</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#hoteles">Hoteles</a></li>
+                    <li><a href="#experiencias">Experiencias</a></li>
+                    <li><a href="#gastronomia">Gastronomía</a></li>
+                    <li><a href="#cultura">Cultura</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section con Imagen de Fondo -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2><span class="japanese-accent">旅行</span> Tu viaje a Japón comienza aquí</h2>
+            <p>Descubre templos antiguos, tecnología futurista y tradiciones milenarias</p>
+        </div>
+    </section>
+
+    <!-- Búsqueda y Filtros -->
+    <section class="search-container">
+        <form id="search-form">
+            <div class="search-grid">
+                <div class="search-item">
+                    <label for="destination"><span class="japanese-accent">場所</span> Destino:</label>
+                    <select id="destination" name="destination">
+                        <option value="">Todos los destinos</option>
+                        <option value="tokyo">Tokio</option>
+                        <option value="kyoto">Kioto</option>
+                        <option value="osaka">Osaka</option>
+                        <option value="hiroshima">Hiroshima</option>
+                        <option value="hokkaido">Hokkaido</option>
+                        <option value="okinawa">Okinawa</option>
+                    </select>
+                </div>
+                <div class="search-item">
+                    <label for="check-in"><span class="japanese-accent">入</span> Fecha de llegada:</label>
+                    <input type="date" id="check-in" name="check-in">
+                </div>
+                <div class="search-item">
+                    <label for="check-out"><span class="japanese-accent">出</span> Fecha de salida:</label>
+                    <input type="date" id="check-out" name="check-out">
+                </div>
+                <div class="search-item">
+                    <label for="travelers"><span class="japanese-accent">人</span> Viajeros:</label>
+                    <input type="number" id="travelers" name="travelers" min="1" value="2">
+                </div>
+                <div class="search-button">
+                    <button type="submit">Buscar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Filtro de Hoteles -->
+    <section id="hoteles" class="hotel-filter">
+        <div class="container">
+            <h2><span class="japanese-accent">ホテル</span> Encuentra tu hotel ideal</h2>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="hotel-destination">Destino:</label>
+                    <select id="hotel-destination">
+                        <option value="">Todos los destinos</option>
+                        <option value="tokyo">Tokio</option>
+                        <option value="kyoto">Kioto</option>
+                        <option value="osaka">Osaka</option>
+                        <option value="hiroshima">Hiroshima</option>
+                        <option value="hokkaido">Hokkaido</option>
+                        <option value="okinawa">Okinawa</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="hotel-type">Tipo de alojamiento:</label>
+                    <select id="hotel-type">
+                        <option value="">Todos los tipos</option>
+                        <option value="hotel">Hotel occidental</option>
+                        <option value="ryokan">Ryokan tradicional</option>
+                        <option value="capsule">Hotel cápsula</option>
+                        <option value="apartment">Apartamento</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Rango de precio:</label>
+                    <select id="price-range">
+                        <option value="">Cualquier precio</option>
+                        <option value="budget">Económico</option>
+                        <option value="mid">Precio medio</option>
+                        <option value="luxury">Lujo</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="amenities">Servicios:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="wifi" name="amenities" value="wifi">
+                        <label for="wifi">WiFi</label>
+                        
+                        <input type="checkbox" id="onsen" name="amenities" value="onsen">
+                        <label for="onsen">Onsen (baño termal)</label>
+                        
+                        <input type="checkbox" id="breakfast" name="amenities" value="breakfast">
+                        <label for="breakfast">Desayuno incluido</label>
+                    </div>
+                </div>
+                <button id="apply-hotel-filters">Aplicar filtros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinos Principales -->
+    <section id="destinos" class="destinations">
+        <div class="container">
+            <h2><span class="japanese-accent">目的地</span> Destinos populares</h2>
+            <div class="destination-grid">
+                <!-- Tokio -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/api/placeholder/400/300" alt="Tokio - Vista de la ciudad">
+                    </div>
+                    <div class="destination-info">
+                        <h3><span class="japanese-accent">東京</span> Tokio</h3>
+                        <p>La vibrante capital que mezcla tradición y futurismo.</p>
+                        <a href="#" class="btn">Explorar Tokio</a>
+                    </div>
+                </div>
+                
+                <!-- Kioto -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/api/placeholder/400/300" alt="Kioto - Templos tradicionales">
+                    </div>
+                    <div class="destination-info">
+                        <h3><span class="japanese-accent">京都</span> Kioto</h3>
+                        <p>La antigua capital imperial con más de 1600 templos budistas.</p>
+                        <a href="#" class="btn">Explorar Kioto</a>
+                    </div>
+                </div>
+                
+                <!-- Osaka -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/api/placeholder/400/300" alt="Osaka - Castillo y barrio de Dotonbori">
+                    </div>
+                    <div class="destination-info">
+                        <h3><span class="japanese-accent">大阪</span> Osaka</h3>
+                        <p>Conocida por su cocina callejera y ambiente desenfadado.</p>
+                        <a href="#" class="btn">Explorar Osaka</a>
+                    </div>
+                </div>
+                
+                <!-- Hiroshima -->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/api/placeholder/400/300" alt="Hiroshima - Parque Memorial de la Paz">
+                    </div>
+                    <div class="destination-info">
+                        <h3><span class="japanese-accent">広島</span> Hiroshima</h3>
+                        <p>Ciudad histórica con un importante mensaje de paz.</p>
+                        <a href="#" class="btn">Explorar Hiroshima</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendario y Planificador de Viaje -->
+    <section id="planificador" class="trip-planner">
+        <div class="container">
+            <h2><span class="japanese-accent">計画</span> Planifica tu viaje</h2>
+            <div class="planner-grid">
+                <div class="calendar-container">
+                    <h3>Selecciona tus fechas</h3>
+                    <div class="calendar">
+                        <!-- Aquí iría el calendario interactivo con JavaScript -->
+                        <div class="calendar-placeholder">
+                            <p>Calendario de disponibilidad</p>
+                            <input type="date" id="trip-start" name="trip-start">
+                            <input type="date" id="trip-end" name="trip-end">
+                        </div>
+                    </div>
+                </div>
+                <div class="suggested-routes">
+                    <h3>Rutas recomendadas</h3>
+                    <div class="route-options">
+                        <div class="route-option">
+                            <h4>Ruta clásica - 10 días</h4>
+                            <ul>
+                                <li>Tokio (3 noches)</li>
+                                <li>Hakone (1 noche)</li>
+                                <li>Kioto (4 noches)</li>
+                                <li>Osaka (2 noches)</li>
+                            </ul>
+                            <button class="btn-select-route">Seleccionar esta ruta</button>
+                        </div>
+                        <div class="route-option">
+                            <h4>Japón histórico - 14 días</h4>
+                            <ul>
+                                <li>Tokio (3 noches)</li>
+                                <li>Nikko (1 noche)</li>
+                                <li>Kanazawa (2 noches)</li>
+                                <li>Kioto (4 noches)</li>
+                                <li>Nara (1 noche)</li>
+                                <li>Hiroshima (2 noches)</li>
+                                <li>Osaka (1 noche)</li>
+                            </ul>
+                            <button class="btn-select-route">Seleccionar esta ruta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencias Culturales -->
+    <section id="experiencias" class="experiences">
+        <div class="container">
+            <h2><span class="japanese-accent">体験</span> Experiencias únicas</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <img src="/api/placeholder/300/200" alt="Ceremonia del té">
+                    <h3>Ceremonia del té tradicional</h3>
+                    <p>Aprende el arte del Chado con maestros tradicionales.</p>
+                    <button class="btn-book">Reservar experiencia</button>
+                </div>
+                <div class="experience-card">
+                    <img src="/api/placeholder/300/200" alt="Clase de sushi">
+                    <h3>Clase de preparación de sushi</h3>
+                    <p>Domina el arte de preparar el mejor sushi con chefs expertos.</p>
+                    <button class="btn-book">Reservar experiencia</button>
+                </div>
+                <div class="experience-card">
+                    <img src="/api/placeholder/300/200" alt="Vestir kimono">
+                    <h3>Paseo en kimono por Kioto</h3>
+                    <p>Viste un kimono tradicional y pasea por los históricos distritos.</p>
+                    <button class="btn-book">Reservar experiencia</button>
+                </div>
+                <div class="experience-card">
+                    <img src="/api/placeholder/300/200" alt="Monte Fuji">
+                    <h3>Ascenso al Monte Fuji</h3>
+                    <p>Una experiencia espiritual en la montaña sagrada de Japón.</p>
+                    <button class="btn-book">Reservar experiencia</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials">
+        <div class="container">
+            <h2><span class="japanese-accent">評価</span> Lo que dicen nuestros viajeros</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"Un viaje inolvidable. La organización fue perfecta y pudimos disfrutar de cada momento sin preocupaciones."</p>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/60/60" alt="Foto de perfil" class="testimonial-avatar">
+                            <div>
+                                <h4>Ana García</h4>
+                                <p>Viajó a Kioto y Tokio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"La experiencia de alojarse en un ryokan tradicional fue mágica. ¡Los baños termales y la comida kaiseki fueron lo mejor del viaje!"</p>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/60/60" alt="Foto de perfil" class="testimonial-avatar">
+                            <div>
+                                <h4>Carlos Mendoza</h4>
+                                <p>Viajó a Hakone y Nikko</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter y promociones -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2><span class="japanese-accent">ニュース</span> Suscríbete a nuestras ofertas</h2>
+                <p>Recibe notificaciones sobre descuentos especiales y contenido exclusivo sobre Japón.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn-subscribe">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3><span class="japanese-accent">会社</span> Sobre nosotros</h3>
+                <p>Somos especialistas en viajes a Japón con más de 10 años de experiencia creando experiencias únicas y memorables.</p>
+            </div>
+            <div class="footer-section">
+                <h3><span class="japanese-accent">連絡</span> Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="icon-phone"></i> +34 912 345 678</li>
+                    <li><i class="icon-email"></i> info@descubrejapón.com</li>
+                    <li><i class="icon-location"></i> Calle del Viaje 123, Madrid, España</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3><span class="japanese-accent">フォロー</span> Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="icon-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3><span class="japanese-accent">支払い</span> Métodos de pago</h3>
+                <div class="payment-methods">
+                    <i class="payment-icon visa"></i>
+                    <i class="payment-icon mastercard"></i>
+                    <i class="payment-icon paypal"></i>
+                    <i class="payment-icon bank-transfer"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Descubre Japón. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de cookies</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

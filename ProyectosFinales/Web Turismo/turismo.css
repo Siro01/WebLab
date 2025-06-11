@@ -1,0 +1,906 @@
+/* ==========================================================================
+   ESTILOS PÁGINA DE TURISMO EN JAPÓN
+   ========================================================================== */
+
+/**
+ * Paleta de colores principal:
+ * - Rojo japonés: #ad0013
+ * - Dorado tradicional: #a67d43
+ * - Negro carbón: #121312
+ * - Verde té matcha (complementario): #4a6d45
+ * - Crema papel washi (complementario): #f7f3e9
+ */
+
+/* ==========================================================================
+   Base y tipografía
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Yuji+Syuku&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-rojo: #ad0013;
+    --color-dorado: #a67d43;
+    --color-negro: #121312;
+    --color-verde: #4a6d45;
+    --color-crema: #f7f3e9;
+    --fuente-principal: 'Noto Sans JP', sans-serif;
+    --fuente-japonesa: 'Yuji Syuku', serif;
+    --fuente-titulos: 'Playfair Display', serif;
+    --sombra-suave: 0 2px 10px rgba(0, 0, 0, 0.15);
+    --sombra-media: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --transicion: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-negro);
+    background-color: var(--color-crema);
+    overflow-x: hidden;
+}
+
+/* Contenedor general para secciones */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tipografía y headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.japanese-accent {
+    font-family: var(--fuente-japonesa);
+    margin-right: 0.5rem;
+}
+
+a {
+    color: var(--color-rojo);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+a:hover {
+    color: var(--color-dorado);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-rojo);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--color-dorado);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+/* ==========================================================================
+   Header y Navegación
+   ========================================================================== */
+
+header {
+    background-color: var(--color-rojo);
+    color: white;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra-media);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.logo h1 {
+    margin-bottom: 0.2rem;
+    font-size: 2.5rem;
+}
+
+.logo p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: var(--transicion);
+}
+
+nav ul li a:hover {
+    color: var(--color-crema);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero {
+    background-image: url('monte.jpg'); /* Imagen Monte Fuji */
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(18, 19, 18, 0.4), rgba(18, 19, 18, 0.7));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   Búsqueda y Filtros
+   ========================================================================== */
+
+.search-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: -5rem;
+    position: relative;
+    z-index: 100;
+    box-shadow: var(--sombra-media);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.search-item {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--color-negro);
+}
+
+select, input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--fuente-principal);
+    transition: var(--transicion);
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: var(--color-dorado);
+    box-shadow: 0 0 0 2px rgba(166, 125, 67, 0.2);
+}
+
+.search-button {
+    display: flex;
+    align-items: flex-end;
+}
+
+.search-button button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-rojo);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.search-button button:hover {
+    background-color: var(--color-dorado);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-suave);
+}
+
+/* Hotel Filter Section */
+.hotel-filter {
+    padding: 5rem 0;
+    background-color: var(--color-crema);
+}
+
+.filter-options {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkbox-group label {
+    margin-left: 0.3rem;
+    margin-bottom: 0;
+}
+
+#apply-hotel-filters {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-rojo);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+    margin-top: 1rem;
+}
+
+#apply-hotel-filters:hover {
+    background-color: var(--color-dorado);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-suave);
+}
+
+/* ==========================================================================
+   Destinos
+   ========================================================================== */
+
+.destinations {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-media);
+}
+
+.destination-image {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.destination-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: scale-down;
+    transition: transform 0.5s ease;
+}
+
+/* Imágenes específicas para cada destino */
+.destination-card:nth-child(1) .destination-image img {
+    content: url('tokyo2.jpg'); /* Imagen Tokio */
+}
+
+.destination-card:nth-child(2) .destination-image img {
+    content: url('kioto.jpg'); /* Imagen Kioto (templo) */
+}
+
+.destination-card:nth-child(3) .destination-image img {
+    content: url('Osaka.jpg'); /* Imagen Osaka */
+}
+
+.destination-card:nth-child(4) .destination-image img {
+    content: url('hiroshima2.jpg'); /* Imagen Hiroshima */
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.1);
+}
+
+.destination-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-info h3 {
+    margin-bottom: 0.75rem;
+    color: var(--color-negro);
+}
+
+.destination-info p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.destination-info .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   Planificador de Viaje
+   ========================================================================== */
+
+.trip-planner {
+    padding: 5rem 0;
+    background-color: var(--color-crema);
+}
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.calendar-container, .suggested-routes {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+.calendar-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.route-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.route-option {
+    background-color: var(--color-crema);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: var(--transicion);
+}
+
+.route-option:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-suave);
+}
+
+.route-option h4 {
+    color: var(--color-rojo);
+    margin-bottom: 1rem;
+}
+
+.route-option ul {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+}
+
+.btn-select-route {
+    padding: 0.75rem 1rem;
+    background-color: var(--color-rojo);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+    width: 100%;
+}
+
+.btn-select-route:hover {
+    background-color: var(--color-dorado);
+}
+
+/* ==========================================================================
+   Experiencias
+   ========================================================================== */
+
+.experiences {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.experience-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+    background-color: white;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-media);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.experience-card h3 {
+    padding: 1rem 1rem 0;
+    font-size: 1.25rem;
+    color: var(--color-negro);
+}
+
+.experience-card p {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-book {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-verde);
+    color: white;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.btn-book:hover {
+    background-color: var(--color-dorado);
+}
+
+/* ==========================================================================
+   Testimonios
+   ========================================================================== */
+
+.testimonials {
+    padding: 5rem 0;
+    background-color: var(--color-crema);
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-dorado) #eee;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.testimonial-slider::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+.testimonial-slider::-webkit-scrollbar-thumb {
+    background-color: var(--color-dorado);
+    border-radius: 6px;
+}
+
+.testimonial-item {
+    min-width: 350px;
+    flex: 1;
+}
+
+.testimonial-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+}
+
+.testimonial-content::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 5rem;
+    font-family: serif;
+    color: rgba(166, 125, 67, 0.1);
+    line-height: 1;
+}
+
+.testimonial-content p {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.testimonial-author h4 {
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+}
+
+.testimonial-author p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    color: #666;
+}
+
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+.newsletter {
+    padding: 5rem 0;
+    background-color: var(--color-rojo);
+    color: white;
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-content h2 {
+    color: white;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-subscribe {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-dorado);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.btn-subscribe:hover {
+    background-color: var(--color-negro);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+    background-color: var(--color-negro);
+    color: white;
+    padding: 5rem 0 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    color: var(--color-dorado);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon, .payment-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: var(--transicion);
+}
+
+.social-icon:hover {
+    background-color: var(--color-dorado);
+    transform: translateY(-3px);
+}
+
+.payment-methods {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--color-dorado);
+}
+
+/* ==========================================================================
+   Animaciones
+   ========================================================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .planner-grid, .route-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .hero {
+        height: 70vh;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .search-container {
+        margin-top: -3rem;
+        padding: 1.5rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .footer-container {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .testimonial-item {
+        min-width: 280px;
+    }
+    
+    .destination-grid, .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
