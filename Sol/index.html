@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content=vidth=divice-width,initial-scale=1,0>
+    <title>descubre japon | Turismo y aventuras</title>
+    <link rel="stylesheet" href="turismo.css">
+
+</head>
+<body>
+    <!--Ecabezado y Navegación-->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span class="japanese-accent"></span>Descubre japon</h1>
+                <p>Experiencias unicas en el pais del sol naciente</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#Hoteles">Hoteles</a></li>
+                    <li><a href="#Experiencias">Experiencias</a></li>
+                    <li><a href="#cultura">cultura</a></li>
+                    <li><li><a href="#contacto">contacto</a></li>
+                    <li><li><a href="#gastronomía">geastronomía</a></li>
+                </ul> 
+            </nav>         
+        </div> 
+    </header>
+
+<!--Hero section con imagen de fondo-->
+<section class="hero">
+    <div class="cero-content">
+        <h2><span class="japanese-accent"></span>Tu viaje a Japón cimienza aquí</h2>
+        <p>Descubre templos antiguos, tecnología futurista y tradiciones milenarias</p>
+    </div>
+</section>
+
+<!--Busqueda y filtros-->
+<section class="search-container">
+    <form id="search-form">
+        <div class="search-grid">
+            <div class="search-item">
+                <label for="destination"><span class="japanese-acent"></span>Destino:<label>
+                <select id="destination" name="destination">
+                    <option value="">todos los destinos</option>
+                    <option value="tokyo">tokyo</option>
+                    <option value="osaka">osaka</option>
+                    <option value="hiroshima">hiroshima</option>
+                    <option value="hokkaido">hokkaido</option>
+                    <option value="okinawa">okinawa</option>
+                </select>
+             </div>
+        </div>
+        <div class="search-item">
+            <label for="check-in"><span class="japanese-accent"></span>fecha de llegada:</label>
+            <imput type="date" id="check-in" name="check-in">
+        </div>
+        <div class="search-item">
+                <label for="check-out"><span class="japanese-accent"></span> Fecha de salida:</label>
+                <input type="date" id="check-out" name="check-out">
+        </div>
+        <div class="search-item">
+                <label for="travelers"><span class="japanese-accent"></span>Viajeros:</label>
+                <imput type="number" id="travelers" name="travelers" min="1" value="2">
+        </div>
+                <div class="search-botton">
+                    <botton type="submit">Buscar</botton>
+                </div> 
+            </div>
+         </form>
+    </section>     
+
+    <!--Filtro de Hoteles-->
+    <section id="hoteles" class="hotel-filter">
+        <div class="container">
+            <h2><span class="japanese-accent"></span>Encuentra tu hotel ideal</h2>
+            <div class="filter opinions">
+                <div class="filter-group">
+                    <label for="hotel-destination">Destino:</label>
+                    <select id="hotel-destination">
+                        <option value="">Todos los detinos</option>
+                        <option value="tokyo">Tokyo</option>
+                        <option value="kyoto">Tioto</option>
+                        <option value="osaka">Osaka</option>
+                        <option value="hiroshima">Hiroshima</option>
+                        <option value="hokkaido">Hokkaido</option>
+                        <option value="okinawa">Okinawa</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="hotel type">Tipo de alojamiento</label>
+                    <select id="hotel-type">
+                        <option value="">Todos los tipos</option>
+                        <option value="hotel">Hotel occidental</option>
+                        <option value="ryokan">Ryokan tradicional</option>
+                        <option value="capsule">Hotel cápsula</option>
+                        <option value="apartment">Apartamento</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Rango de precios:</label>
+                    <select id="price-range">
+                        <option value="">Cualquier precio</option>
+                        <option value="budget">Económico</option>
+                        <option value="mid">Precio medio</option>
+                        <option value="luxury">Lujo</option>
+                    <select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="amenities">Servicios:</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="wifi" name="amenities" value="wifi">
+                            <label for="wifi">Wifi</label>
+
+                            <input type="checkbox" id="onsen" name="amenities" value="onsen">
+                            <label for="onsen">Onsen (baño termal)</label>
+
+                            <imput type="checkbox" id="breakfast" name="amenities" value="breakfast">
+                            <label for="breakfast">Desayuno incluido</label>
+                        </div>
+                    </div>
+                    <button id="apply-hotel-filters">Aplicar filtros</button>
+                </div>
+            </div>
+    </section>
+
+    <!--Destinos principales-->
+    <section id="destinos" class="destinations">
+        <div class="container">
+            <h2><span class="japanese-accent"></span>Destinos populares</h2>
+            <div class="destination-card">
+                <!--Tokio-->
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/api/placeholder/400/300" alt="Tokio - Visita de la ciudad">
+                    </div>
+                    <div class="destination-info">
+                        <h3><span class="japanese-accent"></span> Tokio</h3>
+                        <p>La vibrante capital que mezcla tradición y  futurismo.</p>
+                        <a href="#" class="btn">Explorar Tokio</a>
+                    </div>
+                </div>
+
+                <!--Kioto-->
+                <div class="destination-card">
+                <div class="destination-image">
+
+
+
+
+            </div>
+
+
+
+</body> 
